@@ -85,6 +85,18 @@
                 <&macro_release>,
                 <&mo SCROLL>;
         };
+
+        screenshot_to_clipboard_macro: screenshot_to_clipboard_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(LGUIT(KC_4)))>;
+        };
+
+        screenshot_macro: screenshot_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LGUIT(KC_4))>;
+        };
     };
 };
 
