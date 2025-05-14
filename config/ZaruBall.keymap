@@ -89,13 +89,25 @@
         screenshot_to_clipboard_macro: screenshot_to_clipboard_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(LGUI(KC_4)))>;
+            bindings =
+                <&macro_press &kp LC>,
+                <&macro_press &kp LS>,
+                <&macro_press &kp LGUIT>,
+                <&macro_tap   &kp N4>,
+                <&macro_release &kp LGUIT>,
+                <&macro_release &kp LS>,
+                <&macro_release &kp LC>;
         };
 
         screenshot_macro: screenshot_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LGUI(KC_4))>;
+            bindings =
+                <&macro_press &kp LS>,
+                <&macro_press &kp LGUIT>,
+                <&macro_tap   &kp N4>,
+                <&macro_release &kp LGUIT>,
+                <&macro_release &kp LS>;
         };
     };
 };
